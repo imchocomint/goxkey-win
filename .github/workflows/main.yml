@@ -48,5 +48,4 @@ jobs:
         run: |
           cd target/release/bundle/osx
           zip -r GoKey.zip GoKey.app
-          gh release delete-asset nightly-build GoKey.zip
           gh release upload nightly-build GoKey.zip
