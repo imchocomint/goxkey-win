@@ -42,10 +42,3 @@ jobs:
           name: GoKey.app
           path: target/release/bundle/osx/GoKey.app
           retention-days: 2
-      - name: Release nightly
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          cd target/release/bundle/osx
-          zip -r GoKey.zip GoKey.app
-          gh release upload nightly-build GoKey.zip
